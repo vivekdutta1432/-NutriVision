@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NutriVision AI</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+🍽 NutriVision AI
+</div>
+
+<div class="menu">
+
+<a href="#">Home</a>
+<a href="#">Features</a>
+<a href="#">About</a>
+
+<button id="themeBtn">
+🌙
+</button>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+AI Food Nutrition Analyzer
+</h1>
+
+<p>
+Upload any food image and let AI detect ingredients,
+calories and nutrients in seconds.
+</p>
+
+</section>
+
+<div class="main-container">
+
+<div class="upload-card">
+
+<h2>Upload Food Image</h2>
+
+<div id="dropArea">
+
+<p>
+
+📷
+
+</p>
+
+<h3>
+
+Drag & Drop Image Here
+
+</h3>
+
+<p>
+
+or
+
+</p>
+
+<input
+type="file"
+id="imageInput"
+accept="image/*"
+hidden>
+
+<button
+id="browseBtn">
+
+Browse Image
+
+</button>
+
+</div>
+
+<img
+id="preview"
+style="display:none;">
+
+<button
+id="analyzeBtn">
+
+Analyze Food
+
+</button>
+
+<div
+id="loading">
+
+<div class="loader"></div>
+
+<p>
+
+Analyzing Image...
+
+</p>
+
+</div>
+
+</div>
+
+<div class="result-card">
+
+<h2>
+
+Nutrition Report
+
+</h2>
+
+<div id="result">
+
+<div class="placeholder">
+
+Upload an image to view nutrition details.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+Made with ❤️ using Flask + Gemini AI
+
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
